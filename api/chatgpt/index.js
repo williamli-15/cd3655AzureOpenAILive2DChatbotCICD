@@ -63,8 +63,8 @@ module.exports = async function (context, req) {
         const question = lastMessage.content;
 
         if (model.startsWith('gpt-')) {
-            const apiVersion = "2023-03-15-preview";
-            openaiurl = `https://eastus.api.cognitive.microsoft.com/openai/deployments/${model}/chat/completions?api-version=${apiVersion}`;
+            const apiVersion = "2023-12-01-preview";
+            openaiurl = `https://cd3655openaiaccount.openai.azure.com/openai/deployments/${model}/chat/completions?api-version=${apiVersion}`;
             body['messages'] = body['prompt'];
             delete body['prompt'];
             delete body['best_of'];
